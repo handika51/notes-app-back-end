@@ -35,6 +35,7 @@ class NotesService {
       values: [owner]
     }
     const result = await this._pool.query(query)
+
     return result.rows.map(mapDBToModel)
   }
 
