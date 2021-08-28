@@ -14,7 +14,6 @@ class AuthenticationsHandler {
 
   async postAuthenticationHandler (request, h) {
     try {
-      // console.log(this._validator)
       this._validator.validatePostAuthenticationPayload(request.payload)
 
       const { username, password } = request.payload
